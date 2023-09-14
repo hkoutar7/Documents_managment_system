@@ -1,0 +1,51 @@
+#link1 {
+    transition: all ease 0.6s;
+}
+
+#link1:hover {
+    color: #0162e8 !important;
+    font-weight: 500;
+}
+
+#span-special {
+    color: #0162e8 !important;
+    font-weight: 500;
+}
+
+@media (max-width: 992px) {
+    .icond button,
+    .icond a {
+        font-size: smaller;
+    }
+}
+
+@media (max-width: 576px) {
+    .breadcrumb-header.special h4,
+    .breadcrumb-header.special span,
+    .breadcrumb-header.special a {
+        font-size: smaller !important;
+    }
+}
+
+.ltr {
+    direction: ltr !important;
+}
+
+.ltr-elem {
+    display: block !important;
+    text-align: left !important;
+}
+
+*::placeholder,
+.select-c {
+    font-size: 13px;
+    color: #949eb7;
+    caret-color: #0162e8;
+}
+
+.tble-title {
+    color: #0162e8;
+    font-size: 14.7px;
+    text-transform: capitalize;
+    font-weight: 600;
+}
