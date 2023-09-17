@@ -1,66 +1,141 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# DocuVerse 
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+## Introduction
 
-## About Laravel
+**DocuVerse**   *The Best Universal Document Management Solution*  :  This system, built in Laravel, efficiently manages your documents, with a specific focus on prefecture document management. It provides a user-friendly experience for managing your prefecture documents, along with a high level of security for tracking document permissions and a range of enhanced features.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Features
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
 
-## Learning Laravel
+1. **Authentication** : DocuVerse features a robust authentication system with the following functionalities
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+- User Registration
+- User Login with Email Verification
+- Password Reset
+- Email Recovery
+- Third-party Authentication Support:
+    * Google
+    * Facebook
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+2. **Authorization System** : DocuVerse offers a role-based authorization system with three roles
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+- **Owner** : Full control of the system .
+- **Admin** : Administrative privileges with document and user management capabilities.
+- **User** : Standard access for document management.
 
-## Laravel Sponsors
+**Role Management**
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+- **Add Role**: create new roles to define access permissions.
+- **Edit Role**: Modify existing roles to adapt to changing organizational needs.
+- **Delete Role**: Remove unnecessary roles to maintain a streamlined system.
+- **List Roles**: Easily view and manage all available roles in the system.
+- **Assign Permissions**: Assign new permissions to roles, ensuring precise access control.
 
-### Premium Partners
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+3. **User Management**
 
-## Contributing
+- **Add User**:  add new users to the system to expand your user base.
+- **List Users**: Quickly retrieve an overview of all registered users for easy reference.
+- **Edit User**: Modify user details and settings as needed to keep information up-to-date.
+- **Delete User**: Remove user accounts when they beacame inactives
+- **Activate User**: Activate user accounts to grant access to the system.
+- **Deactivate User**: Temporarily disable user accounts while preserving their data.
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+4. **Management of Prefecture Clients**
 
-## Code of Conduct
+- **Add New Client**: Easily add new clients to the prefecture management system.
+- **Edit Client Info**: Update client information as needed to keep records accurate.
+- **List All Clients**: Quickly access the list of all registered clients.
+- **Drop Client**: Remove clients from the system when necessary.
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+5. **Manage section's prefectures**
 
-## Security Vulnerabilities
+- **Add New section**: Easily add new prefecture's section to the system.
+- **Edit Section Info**: Modify prefecture's secion details for accuracy and updates.
+- **List All sections**: Access the list of all registered prefectures's sections .
+- **Delete section**: Remove unnecessary prefecture's section .
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+6. **Document Prefecture Management**
 
-## License
+- **Add New Document**: Easily upload new documents to the prefecture system.
+- **List All Documents**: Quickly access a comprehensive list of all registered documents.
+- **Edit Existing Document**: Modify document details and content for accuracy and updates.
+- **Delete Document**: Remove unnecessary documents.
+- **Archive Document**: Archive documents for historical reference and organization.
+- **View Document Details**: Examine document information to access essential details.
+- **Export Documents**: Export all documents in Excel or PDF format for convenient sharing and reference.
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+7. **Manage Attachments to Documents**
+
+- **Attach Multiple Files**: Easily link multiple attachments to a document for comprehensive information.
+- **View Attachments**: Examine attachments individually for quick reference.
+- **Download Attachments**: Download attachments to your local device for offline access.
+- **Delete Attachments**: Remove unnecessary attachments .
+- **Rename Attachments**: Edit attachment names for clarity and organization.
+- **Edit Attachment Details**: Update attachment information for accuracy and relevance.
+
+8. **Accessing Document Archive**
+
+- **Restore Document**: Easily recover documents from the archive when needed.
+- **Delete Document**: Permanently remove documents from the archive to free up space and resources.
+
+9. **Report Section**
+
+- **Search by Name**: Quickly find documents by searching for their names.
+- **Filter by Document Section/Date**: Narrow down your search by specifying the document section or/and creation date.
+
+
+10. **User Profile Management**
+
+- **View Profile Details**: Easily access and review your profile information.
+- **Edit Profile Information**: Update your profile details to keep them accurate and up-to-date.
+- **Add Profile Picture**: Personalize your account by uploading a profile picture.
+- **Change Password**: Enhance your account security by changing your password.
+- **Delete Your Account**: If necessary, remove your account while preserving data privacy.
+
+11. **Dashboard Section**
+
+- **Consult Essential Statistics**: Access crucial statistics, including the total number of clients and monthly client statistics, as well as document and monthly document statistics.
+- **View Latest Clients**: Stay updated with the latest client information.
+- **Visualize Trends**:
+  - **Bar Charts**: Gain insights at a glance with two bar charts showcasing document section trends.
+  - **Circle Diagram**: Explore data with a dynamic circle diagram illustrating the distribution of documents across three key sections.
+
+## Getting Started
+
+1. Clone the repository: `git clone https://github.com/hkoutar7/Documents_managment_sytem.git my_proj` then  `cp my_proj`
+2. Install dependencies: `composer install`
+3. Install  js run time enviornment: `npm install` `npm run build`
+4. Create .env file based on .env.example : `cp .env.example .env` 
+5. Configure settings in `.env`
+6. Run migration and seeder files : `php artisan mi:f --seed`
+7. create a unique key :  `php artisan key:generate`
+8. Run the app: `php artisan ser`
+9. Access the app through your browser: `http://localhost:8000`
+10. logged in the owner session then create 2 roles : Admin ,User
+
+## Acknowledgments
+
+I want to express my gratitude to everyone who supported me throughout the development of This project. Your encouragement and insights have been invaluable in shaping this accomplishment.
+
+## Stay Updated
+
+Stay tuned for upcoming developments in our project aimed at enhancing your document management experience at the prefecture. Join us on this journey as we collaborate to redefine the future of document management through innovative solutions. Together, we'll shape a more efficient and secure way to handle prefectural documents, streamlining processes and ensuring data integrity.
+
+
+## Authors
+
+- [hkoutar7](https://github.com/hkoutar7)
+
+## Technologies used :
+
+
+[![My Skills](https://skillicons.dev/icons?i=html,css,js,bootstrap,jquery,php,laravel,nodejs,mysql&perline=5)](https://skillicons.dev)
+## Contributions
+
+Contributions are welcome! If you find any issues or have ideas for improvements, feel free to submit issues and pull requests to enhance the project.
+## Demo
+
+in progress
+
