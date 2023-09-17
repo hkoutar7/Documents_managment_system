@@ -63,6 +63,15 @@
 </div>
 @endif
 
+@if(session()->has('EcheckPhoto'))
+<div class="alert alert-danger mg-b-0" role="alert" style="position: fixed; z-index: 1000; left: 21px; bottom: 18px;">
+    <button aria-label="Close" class="close" data-dismiss="alert" type="button">
+        <span aria-hidden="true">&times;</span>
+    </button> &nbsp;
+    <strong>Erreur !</strong> &nbsp; {{ session()->get('EcheckPhoto') }}
+</div>
+@endif
+
 @if(session()->has('updatePassword'))
 <div class="alert alert-success mg-b-0" role="alert" style="position: fixed; z-index: 1000; left: 21px; bottom: 18px;">
     <button aria-label="Close" class="close" data-dismiss="alert" type="button">

@@ -64,7 +64,7 @@ class ProfileController extends Controller
     public function addAvatar(Request $request)
     {
 
-        if ( $request->has('avatar') ) {
+        if ($request->hasFile('avatar') && $request->file('avatar')->isValid())  {
 
             $myfile = $request->file('avatar');
             $namefile = $myfile->hashName();
@@ -80,9 +80,11 @@ class ProfileController extends Controller
             DB::table('users')->where('id','=',userID())->update(['avatar_id' => $avatarId]);
 
             $request->file('avatar')->storeAs('/'.auth()->user()->name,$namefile,'usersDisk');
+            session()->flash('AddPhoto', 'La photo de profil a été mise à jour avec succès');
         }
+        else
+            session()->flash('EcheckPhoto', 'La photo de profil est echoue');
 
-        session()->flash('AddPhoto', 'La photo de profil a été mise à jour avec succès');
         return redirect()->back();
     }
 }
